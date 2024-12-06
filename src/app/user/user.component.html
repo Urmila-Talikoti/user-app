@@ -1,0 +1,29 @@
+<div class="container">
+    <i (click)="goback()" class="fa-solid fa-circle-left"></i>
+    <h2>User Management System</h2>
+</div>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="title">
+        <h2>{{isEdit ? "Update User" : "Add User"}}</h2>
+    </div>
+    <div class="input-field">
+        <label>Fullname</label>
+        <input type="text" formControlName="fullName"
+         [ngClass]="{'error':userForm.controls['fullName'].touched && userForm.controls['fullName'].invalid}"/>
+    </div>
+    <div class="input-field">
+        <label>Username</label>
+        <input type="email" formControlName="userName"
+        [ngClass]="{'error':userForm.controls['userName'].touched && userForm.controls['userName'].invalid}"/>
+    </div>
+    <div class="input-field">
+        <label>Mobile No</label>
+        <input type="number"formControlName="mobileNo"
+        [ngClass]="{'error':userForm.controls['mobileNo'].touched && userForm.controls['mobileNo'].invalid}"/>
+    </div>
+    <button [disabled]="userForm.invalid" type="submit">
+        {{isEdit ? "Update User" : "Add User"}}
+    </button>
+</form>
+
+<app-loader *ngIf="loading"></app-loader>

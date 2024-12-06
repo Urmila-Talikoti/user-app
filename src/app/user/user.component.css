@@ -1,0 +1,103 @@
+.container{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0px 2%;
+    gap: 30px;
+}
+.container i{
+    font-size: 25px;
+    color: blueviolet;
+    cursor: pointer;
+}
+.container h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: blueviolet;
+    text-transform: capitalize;
+}
+form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 450px;
+    padding: 15px 30px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.41);
+}
+form .title{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.title h2{
+    font-weight: 510;
+    text-transform: capitalize;
+}
+.input-field{
+    margin: 8px 0px;
+    width: 100%;
+}
+.input-field label{
+    font-size: 14px;
+    font-weight: 520;
+
+}
+.input-field input[type='number'],
+.input-field input[type='text'],
+.input-field input[type='email']{
+
+    width: 100%;
+    margin-top: 5px;
+    padding: 6px;
+    outline:none;
+    transition: all ease-in 0.25s;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+.input-field .error{
+    width: 100%;
+    margin-top: 5px;
+    padding: 6px;
+    outline:none;
+    transition: all ease-in 0.25s;
+    border: 2px solid red !important;
+    border-radius: 4px;
+}
+.input-field input:read-only{
+    background: blueviolet;
+    border: 2px solid blueviolet;
+    color: white;
+    font-weight: 510;
+}
+.input-field:focus-within input{
+    border:  2px solid blueviolet;
+}
+.input-field:focus-within label{
+    color: black;
+}
+.check-container .child p{
+    font-size: 13px;
+    font-weight: 510;
+}
+form button{
+    margin: 15px 0px;
+    padding: 10px;
+    width: 100%;
+    background: blueviolet;
+    outline: none;
+    border: 2px solid blueviolet;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 520;
+    color: #fff !important;
+}
+form button:disabled{
+   color: black;
+}

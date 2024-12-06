@@ -1,0 +1,44 @@
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100Vh;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.loader .box{
+    width: 120px;
+    height: 130px;
+    background: #fff;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.loader .box .circle{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid #ddd;
+    border-top: 5px solid navy;
+    transition: all ease-in 0.25s;
+    animation: rotate linear infinite 0.5s;
+}
+.loader .box p{
+    font-size: 13px;
+    font-weight: 520;
+    color: black;
+}
+@keyframes rotate{
+    100%{
+        rotate: 359deg;
+    }
+}
