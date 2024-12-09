@@ -1,0 +1,27 @@
+.about {
+    width: 100%;
+    background-image: url('https://t3.ftcdn.net/jpg/02/54/20/88/240_F_254208823_NXcV5RCcWJ1vgSuWjhPqIpPmqXIyBrDO.jpg');
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: cover;
+    height: 88vh;
+    margin-top: 10px;
+  }
+  
+  .about h1 {
+    font-size: 2.5rem;
+    padding-top: 80px;
+    padding-left: 900px;
+    color: #ff6347;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 20px;
+    padding-left: 650px;
+    padding-right: 100px;
+    color: white;
+  }

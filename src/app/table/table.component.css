@@ -1,0 +1,71 @@
+.container{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0px 2%;
+    gap: 30px;
+}
+.container button{
+    padding: 10px 25px;
+    background-color: navy;
+    border: 2px solid white;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: all ease-in 0.25s;
+}
+table{
+    margin: 40px auto;
+    width: 650px;
+    border-collapse: collapse;
+    border-radius: 4px;
+    overflow: hidden;
+}
+table thead{
+    width: 100%;
+    color: white;
+    background-color: navy;
+}
+table th{
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+table tbody tr{
+    border-bottom: 1px solid navy;
+}
+table tbody tr:hover{
+    background-color:  rgba(0, 0, 128, 0.329);
+}
+table tbody td{
+    font-size: 13px;
+    text-align: center;
+    padding: 6px;
+}
+table tbody .action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.action i{
+    font-size: 16px;
+    transition: all ease-in 0.25s;
+    cursor: pointer;
+}
+.action i:first-child{
+    color: green;
+}
+.action i:first-child:active{
+    color: lime;
+}
+.action i:last-child{
+    color: crimson;
+}
+.action i:last-child:active{
+    color: red;
+}

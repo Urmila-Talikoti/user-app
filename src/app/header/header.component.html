@@ -1,28 +1,9 @@
 <div class="container">
-    <h2>User Management System</h2>
-    <button (click)="adduser()">Add User</button>
+    <h2>THE FOOD HEAVEN</h2>
+    <div class="links">
+        <button (click)="home()">Home</button>
+        <button (click)="about()">About Us</button>
+        <button (click)="menu()">Menu</button>
+        <button class="btn" (click)="adduser()">Order Now</button>
+    </div>
 </div>
-<table>
-    <thead>
-        <tr>
-            <th>User Id</th>
-            <th>Fullname</th>
-            <th>Username</th>
-            <th>Mobile No</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let user of users;let i=index">
-            <td>{{i+1}}</td>
-            <td>{{user.fullName}}</td>
-            <td>{{user.userName}}</td>
-            <td>{{user.mobileNo}}</td>
-            <td class="action">
-                <i (click)="edituser(user._id)" class="fa-solid fa-user-pen"></i>
-                <i (click)="deleteUser(user._id)" class="fa-solid fa-trash"></i>
-            </td>
-        </tr>
-    </tbody>
-</table>
-<app-loader *ngIf="loading"></app-loader>

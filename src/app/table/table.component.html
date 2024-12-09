@@ -1,0 +1,30 @@
+<div class="container">
+   
+    <button (click)="addUser()">Add Your Order</button>
+</div>
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Order Id</th>
+                <th>Dish Name</th>
+                <th>Price</th>
+                 <th>Payment Mode</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users;let i=index">
+               <td>{{i+1}}</td>
+               <td>{{user.productname}}</td>
+               <td>{{user.productsku}}</td>
+               <td>{{user.category}}</td>
+                <td class="action">
+                    <i (click)="editUser(user._id)" title="Edit User" class="fa-solid fa-user-pen"></i>
+                    <i (click)="deleteUser(user._id)" title="Delete User" class="fa-solid fa-trash"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-loader *ngIf="loading"></app-loader>

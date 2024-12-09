@@ -1,29 +1,35 @@
 <div class="container">
-    <i (click)="goback()" class="fa-solid fa-circle-left"></i>
-    <h2>User Management System</h2>
+    
+    <h2><i (click)="goBack()" class="fa-solid fa-backward"></i></h2>
 </div>
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="userForm"(ngSubmit)="onSubmit()">
     <div class="title">
-        <h2>{{isEdit ? "Update User" : "Add User"}}</h2>
+        <h3>{{isEdit ? "Update Order Details": "Add Order Details"}}</h3>
+    </div>
+    
+    <div class="input-field">
+        <label for="">Dish name</label>
+        <input type="text" formControlName="productname"
+        [ngClass]="{'error':userForm.controls['productname'].touched && userForm.controls['productname'].invalid}"/>
     </div>
     <div class="input-field">
-        <label>Fullname</label>
-        <input type="text" formControlName="fullName"
-         [ngClass]="{'error':userForm.controls['fullName'].touched && userForm.controls['fullName'].invalid}"/>
+        <label for="">Price</label>
+        <input type="number" formControlName="productsku"
+        [ngClass]="{'error':userForm.controls['productsku'].touched && userForm.controls['productsku'].invalid}"/>
+        
     </div>
     <div class="input-field">
-        <label>Username</label>
-        <input type="email" formControlName="userName"
-        [ngClass]="{'error':userForm.controls['userName'].touched && userForm.controls['userName'].invalid}"/>
+        <label for="">Payment Mode</label>
+        <select name="productType" formControlName="category">
+            <option value="" selected>SELECT FOOD TYPE</option>
+            <option *ngFor="let ut of productType" value={{ut}}>{{ut}}</option>
+        </select>
     </div>
-    <div class="input-field">
-        <label>Mobile No</label>
-        <input type="number"formControlName="mobileNo"
-        [ngClass]="{'error':userForm.controls['mobileNo'].touched && userForm.controls['mobileNo'].invalid}"/>
-    </div>
-    <button [disabled]="userForm.invalid" type="submit">
-        {{isEdit ? "Update User" : "Add User"}}
+    
+    <button  [disabled]="userForm.invalid" type="submit">
+        {{isEdit ? "Update Your Order": "Add Your Order"}}
     </button>
-</form>
 
+</form>
 <app-loader *ngIf="loading"></app-loader>
+

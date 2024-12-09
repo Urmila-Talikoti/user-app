@@ -1,0 +1,31 @@
+.home {
+    text-align: center;
+    width: 100%;
+    background-image: url('https://st4.depositphotos.com/9012638/30613/i/450/depositphotos_306130402-stock-photo-herb-and-spices-cooking-background.jpg');
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: cover;
+    height: 88vh;
+    margin-top: 10px;
+  }
+  
+  .home h1 {
+    font-size: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 150px;
+    color: navy;
+  }
+  
+  .home h2 {
+    color: #ff6347;
+  }
+  
+  .home p {
+    padding-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(0, 0, 128, 0.855);
+  }

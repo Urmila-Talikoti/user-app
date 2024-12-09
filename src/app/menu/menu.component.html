@@ -1,0 +1,14 @@
+<div class="search-container">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search for a dish..." class="search-input" />
+  </div>
+  
+  <div class="menu-container">
+    <div class="menu-card" *ngFor="let item of filteredMenuItems()">
+      <img [src]="item.image" alt="{{ item.name }}" class="menu-image">
+      <div class="menu-info">
+        <h3 class="menu-name">{{ item.name }}</h3>
+        <p class="menu-description">{{ item.description }}</p>
+        <p class="menu-price">Rs. {{ item.price }}</p>
+      </div>
+    </div>
+  </div>

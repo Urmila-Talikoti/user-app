@@ -9,14 +9,20 @@
 }
 .container i{
     font-size: 25px;
-    color: blueviolet;
+    color: navy;
     cursor: pointer;
 }
-.container h2{
-    font-size: 20px;
-    font-weight: 500;
-    color: blueviolet;
-    text-transform: capitalize;
+.container button{
+    margin-left: 1270px;
+    padding: 10px 10px;
+    background: navy;
+    outline: none;
+    border: 2px solid navy;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 520;
+    color: #fff !important;
+
 }
 form{
     position: fixed;
@@ -51,8 +57,7 @@ form .title{
 }
 .input-field input[type='number'],
 .input-field input[type='text'],
-.input-field input[type='email']{
-
+form .input-field select{
     width: 100%;
     margin-top: 5px;
     padding: 6px;
@@ -61,6 +66,7 @@ form .title{
     border: 2px solid #ddd;
     border-radius: 4px;
 }
+
 .input-field .error{
     width: 100%;
     margin-top: 5px;
@@ -71,13 +77,13 @@ form .title{
     border-radius: 4px;
 }
 .input-field input:read-only{
-    background: blueviolet;
-    border: 2px solid blueviolet;
+    background: navy;
+    border: 2px solid navy;
     color: white;
     font-weight: 510;
 }
 .input-field:focus-within input{
-    border:  2px solid blueviolet;
+    border:  2px solid navy;
 }
 .input-field:focus-within label{
     color: black;
@@ -90,9 +96,9 @@ form button{
     margin: 15px 0px;
     padding: 10px;
     width: 100%;
-    background: blueviolet;
+    background: navy;
     outline: none;
-    border: 2px solid blueviolet;
+    border: 2px solid navy;
     border-radius: 3px;
     cursor: pointer;
     font-weight: 520;

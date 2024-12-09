@@ -19,18 +19,18 @@ export class ApiService {
    constructor(private http:HttpClient) { }
 
   getAllUsers():Observable<any>{
-    return this.http.get('https://back-end-ums.vercel.app/api/getUser')
+    return this.http.get('https://backend-six-teal-68.vercel.app/api/getUserAll')
   }
   addUser(userForm:any):Observable<any>{
-    return this.http.post('https://back-end-ums.vercel.app/api/addUser',userForm)
+    return this.http.post('https://backend-six-teal-68.vercel.app/api/addUser',userForm)
   }
   getUserDetail(id:any):Observable<any>{
-    return this.http.get(`https://back-end-ums.vercel.app/api/getUser/${id}`)
+    return this.http.get(`https://backend-six-teal-68.vercel.app/api/getUser/${id}`)
   }
   updateUser(id:any,userForm:any):Observable<any>{
-    return this.http.put(`https://back-end-ums.vercel.app/api/updateUser/${id}`,userForm)
+    return this.http.put(`https://backend-six-teal-68.vercel.app/api/updateUser/${id}`,userForm)
   }
   deleteUser(id:any):Observable<any>{
-    return this.http.delete(`https://back-end-ums.vercel.app/api/deleteUser/${id}`)
+    return this.http.delete(`https://backend-six-teal-68.vercel.app/api/deleteUser/${id}`)
   }
 }
