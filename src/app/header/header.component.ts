@@ -7,7 +7,7 @@ import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-header',
-  imports: [LoaderComponent, NgIf, NgFor],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
